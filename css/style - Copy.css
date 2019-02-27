@@ -9,8 +9,12 @@ body {
   width: 100%;
 }
 
+.navbar-list {
+  float: right;
+}
 
 #buttons li {
+  float: left;
   list-style: none;
   color: #FFFFFF;
   text-align: center;
@@ -28,11 +32,13 @@ body {
 }
 
 /**Headers**/
- h1 {
+h1 {
   font-size: 56px;
   font-family: Fjalla One;
-  text-align: center;
-  margin-top: 15%;
+  padding-top: 15%;
+  padding-bottom: 12%;
+  margin: 5%;
+  padding-right: 15%;
 }
 
 h2 {
@@ -54,7 +60,6 @@ h3 {
 /**Homepage Case Study Section 1**/
 
 .case-study-section1 p {
-  margin-top: 1%;
   text-align: center;
 }
 
@@ -63,13 +68,13 @@ h3 {
 }
 
 .button {
+  float: left;
   color: #FFFFFF;
   text-align: center;
   background-color: #0C2340;
   width: 200px;
   line-height: 60px;
   border-radius: 4px;
-  padding: 20px;
   text-decoration: none;
 }
 
@@ -77,48 +82,43 @@ h3 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15%;
-  width: 8%;
+  width: 50%;
 }
 
 .bloccloud-button {
-  display: block;
   margin-top: 5%;
-  margin-left: 43%;
+  margin-left: 25%;
 }
 
 .bloccloud-desktop {
-  float: left;
-  margin-left: 15%;
-  margin-top: 5%;
-}
-
-.bloccloud-smartphone {
-  display: inline-block;
-  margin-left: 8%;
-  margin-top: 5%;
-}
-
-/**Homepage Case Study Section 2**/
-.busy-bus {
-  text-align: center;
-  margin-top: 20%;
-}
-
-.busy-bus2 {
-  text-align: center;
-}
-
-.case-study-section2 p {
-  margin-top: 1%;
-  text-align: center;
-}
-
-.case-study-section2 img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%;
+  width: 50%;
+}
+
+.bloccloud-smartphone {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/**Homepage Case Study Section 2**/
+.case-study-section2 {
+  margin: 0 auto;
+}
+
+.busy-bus {
+}
+
+.busy-bus2 {
+}
+
+.case-study-section2 p {
+}
+
+.case-study-section2 img {
 }
 
 /**Homepage Case Study Section 3**/
@@ -127,69 +127,47 @@ h3 {
 }
 
 .button2 {
+  float: left;
   color: #FFFFFF;
   text-align: center;
   background-color: #0C2340;
   width: 300px;
   line-height: 60px;
   border-radius: 4px;
-  padding: 20px;
   text-decoration: none;
 }
 
 .draw-with-me {
-  text-align: center;
-  margin-top: 20%;
 
 }
 
 .draw-with-me2 {
-  text-align: center;
 
 }
 
 .case-study-section3 p {
-  text-align: center;
-  margin-top: 1%;
 
 }
 
 .vertical-image {
-  float: left;
-  margin-left: 25%;
-  margin-top: 5%;
+
 }
 
 .horizontal-image {
-  display: inline-block;
-  margin-left: 10%;
-  margin-top: 10%;
 }
 
 .upcoming {
-  margin-top: 10%;
-  text-align: center;
 }
 
 /**Footer**/
 footer h2 {
-  text-align: center;
-  margin-top: 20%;
 }
 
 footer p {
-  text-align: center;
-  margin-top: 1%;
 }
 
 
 footer li {
-  float: right;
-  font-size: 2rem;
-  margin-bottom: 2%;
-  position: relative;
-  text-align: center;
-  right: 46%;
 }
 
 /**Case Study Header**/
@@ -277,113 +255,4 @@ margin-left: 45%;
 
 .section4 p {
   width: 50%;
-}
-
-.section4 img {
-  width: 100%;
-  margin-bottom: 2%;
-}
-
-/**Section 5**/
-.section5 {
-  margin: 5%;
-}
-
-.section5 h3 {
-  margin-top: 20%;
-  margin-bottom: 2%;
-}
-
-.section5 p {
-  width: 50%;
-  margin-top: 2%;
-}
-
-/**Section 6**/
-.section6 {
-  margin: 5%;
-}
-
-.section6 h3 {
-  margin-top: 20%;
-}
-
-.section6 p {
-  width: 50%;
-  margin-top: 2%;
-}
-
-.section6 img {
-  margin-left: 10%;
-  margin-top: 5%;
-}
-
-/**Section 7**/
-.section7 {
-  margin: 5%;
-}
-
-.section7 h3 {
-  margin-top: 20%;
-  margin-bottom: 2%;
-}
-
-.section7 p {
-  width: 50%;
-  margin-top: 2%;
-}
-
-.section7 img {
-  margin-left: 10%;
-  margin-top: 2%;
-}
-
-/**Section 8**/
-.section8 {
-  margin: 5%;
-}
-
-.section8 h3 {
-  margin-top: 20%;
-  margin-bottom: 2%;
-}
-
-.section8 p {
-  width: 50%;
-  margin-top: 2%;
-}
-
-.section8 img{
-  width: 100%;
-}
-
-.break p {
-  margin-top: 10%;
-}
-
-.smartphones img {
-  float: right;
-  margin-right: 25%;
-  margin-top: 10%;
-  width: 10%;
-}
-
-/**Section 9**/
-.section9 {
-  margin: 5%;
-}
-
-.section9 h3 {
-  margin-top: 20%;
-  margin-bottom: 2%;
-}
-
-.section9 p {
-  width: 50%;
-  margin-top: 2%;
-}
-
-.move-top {
-  text-align: center;
-  margin-top: 10%;
 }

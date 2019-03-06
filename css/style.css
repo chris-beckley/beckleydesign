@@ -3,14 +3,20 @@
 }
 
 body {
+  display: grid;
   font-family: Montserrat;
   font-size: 17px;
   line-height: 1.6;
-  width: 100%;
+  grid-template-areas:
+  "hero"
+  "case-study-section1"
+  "case-study-section2"
+  "case-study-section3";
 }
 
 
 #buttons li {
+  float: left;
   list-style: none;
   color: #FFFFFF;
   text-align: center;
@@ -27,12 +33,24 @@ body {
   display: block;
 }
 
+.navbar-list {
+  grid-area: navbar-list;
+}
+
 /**Headers**/
+.hero {
+  background-image: url(../images/hero-image.png);
+  background-size: 100% 100%;
+  grid-area: hero;
+  padding: 2rem;
+}
  h1 {
+   color: #ffffff;
   font-size: 56px;
   font-family: Fjalla One;
   text-align: center;
-  margin-top: 15%;
+  margin-top: 16rem;
+  margin-bottom: 16rem;
 }
 
 h2 {
@@ -51,14 +69,32 @@ h3 {
   font-family: Gaegu;
 }
 
-/**Homepage Case Study Section 1**/
+.case-study-section1, .case-study-section3 {
+  background-color: #243853;
+  color: #ffffff;
+}
 
-.case-study-section1 p {
-  margin-top: 1%;
+.case-study-section2, footer {
+  background-color: #0C2340;
+  color: #ffffff;
+}
+
+.case-study-section1, .case-study-section2, .case-study-section3 {
+  padding-bottom: 5rem;
+}
+
+
+
+/**Homepage Case Study Section 1**/
+.case-study-section1 {
+  grid-area: case-study-section1;
+}
+
+.center {
   text-align: center;
 }
 
-.case-study-section1 h2 {
+.bloccloud-h2 {
   text-align: center;
 }
 
@@ -73,33 +109,37 @@ h3 {
   text-decoration: none;
 }
 
-.bloccloud-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15%;
-  width: 8%;
+.button-2 {
+  color: #FFFFFF;
+  text-align: center;
+  background-color: #243853;
+  width: 200px;
+  line-height: 60px;
+  border-radius: 4px;
+  padding: 20px;
+  text-decoration: none;
 }
 
 .bloccloud-button {
-  display: block;
-  margin-top: 5%;
-  margin-left: 43%;
+  text-align: center;
+  padding: 2rem;
 }
 
-.bloccloud-desktop {
-  float: left;
-  margin-left: 15%;
-  margin-top: 5%;
+.bloccloud-desktop, .bloccloud-smartphone, .bloccloud-logo {
+  text-align: center;
 }
 
-.bloccloud-smartphone {
-  display: inline-block;
-  margin-left: 8%;
-  margin-top: 5%;
+.center {
+  width: 50%;
+  margin-left: 10rem;
 }
+
 
 /**Homepage Case Study Section 2**/
+.case-study-section2 {
+  grid-area: case-study-section2;
+}
+
 .busy-bus {
   text-align: center;
   margin-top: 20%;
@@ -123,7 +163,7 @@ h3 {
 
 /**Homepage Case Study Section 3**/
 .case-study-section3 {
-  margin: 0 auto;
+  grid-area: case-study-section3;
 }
 
 .button2 {
@@ -139,31 +179,22 @@ h3 {
 
 .draw-with-me {
   text-align: center;
-  margin-top: 20%;
+  margin-top: 5rem;
 
 }
 
 .draw-with-me2 {
   text-align: center;
-
 }
 
 .case-study-section3 p {
   text-align: center;
   margin-top: 1%;
-
 }
 
-.vertical-image {
-  float: left;
-  margin-left: 25%;
-  margin-top: 5%;
-}
-
-.horizontal-image {
-  display: inline-block;
-  margin-left: 10%;
-  margin-top: 10%;
+.horizontal-image, .vertical-image {
+  text-align: center;
+  padding: 4rem;
 }
 
 .upcoming {
@@ -172,215 +203,248 @@ h3 {
 }
 
 /**Footer**/
+footer {
+  padding: 10rem;
+}
 footer h2 {
   text-align: center;
-  margin-top: 20%;
 }
 
 footer p {
   text-align: center;
-  margin-top: 1%;
+  margin-top: 2rem;
 }
 
 
 footer li {
   float: right;
-  font-size: 2rem;
-  margin-bottom: 2%;
+  font-size: 3rem;
+  margin-top: 5rem;
   position: relative;
-  text-align: center;
-  right: 46%;
+  right: 41%;
 }
 
+i.fa {
+    color: #ffffff;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  footer li {
+    right: 42%
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bloccloud-desktop {
+    padding-left: 5rem;
+    padding-top: 15rem;
+  }
+
+  .bloccloud-smartphone {
+    padding-top: 15rem;
+  }
+
+.case-study-section1, .case-study-section2 {
+  padding: 4rem;
+ display: grid;
+ grid-template-columns: 4fr 4fr 4fr;
+}
+
+.case-study-section2 img {
+  padding-left: 20rem;
+}
+
+.center {
+width: 100%;
+margin-left: 0;
+}
+
+
+.horizontal-image {
+  padding-top: 8rem;
+}
+
+.vertical-image {
+   float: left;
+   padding-left: 20rem;
+ }
+
+  .upcoming {
+    margin: 10rem;
+  }
+}
+
+footer li {
+  right: 42.5%
+}
 /**Case Study Header**/
-.bloccloud-header img {
-margin-top: 12%;
-margin-left: 45%;
+
+.bloccloud-logo {
+ text-align: center;
+ margin-top: 15rem;
 }
 
 .bloccloud-header h2 {
+  color: #ffffff;
   text-align: center;
 }
 
 .sub-heading {
+  color: #ffffff;
   font-size: 24px;
   padding-top: 2%;
 }
 
 .view-prototype {
-  padding-top: 10%;
-  padding-left: 42%;
+  padding: 5rem;
+  text-align: center;
 }
 
 /**Case Study Body, Section 1**/
 .section1 {
-  margin: 5%;
+  margin: 5rem;
 }
 
 .section1 h3 {
-  padding-top: 10%;
-  padding-bottom: 2%;
+  margin: 5rem;
+  text-align: center;
 }
 
 .section1 p {
-  float: left;
-  width: 28%;
-}
+  text-align: center;
+ }
 
-.section1 img {
-  padding-left: 8%;
+.section1-img {
+  margin: 5rem;
+  text-align: center;
 }
 
 /**Section 2**/
 .section2 {
-  margin: 5%;
-  padding-top: 25%;
+margin: 5rem;
 }
 
 .section2 h3 {
-  padding-bottom: 2%;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
+.p-spacing {
+  margin-bottom: 2rem;
+  text-align: center;
+}
 /**Section 3**/
 .section3 {
-  margin: 5%;
+  margin: 5rem;
 }
 
-.section3 h3 {
-  padding-top: 10%;
-  padding-bottom: 2%;
-}
-
-.section3 p {
-  float: left;
-  width: 28%;
-}
-
-.spacing {
-  padding-top: 2%;
+.section3 h3, .section3 p {
+  margin: 5rem;
+  text-align: center;
 }
 
 .section3 img {
-  float: right;
-  padding-right: 8%;
+ display: block;
+  margin: 0 auto;
+  width: 50%;
 }
 
 /**Section 4**/
 .section4 {
-  margin: 5%;
+  margin: 5rem;
 }
 
-.section4 h3 {
-  padding-top: 60%;
-  padding-bottom: 2%;
-}
-
-.section4 p {
-  width: 50%;
+.section4 h3, .section4 p {
+  margin: 5rem;
+  text-align: center;
 }
 
 .section4 img {
-  width: 100%;
-  margin-bottom: 2%;
+  display: block;
+  margin: 0 auto;
+  width: 75%;
 }
 
 /**Section 5**/
 .section5 {
-  margin: 5%;
+  margin: 5rem;
 }
 
-.section5 h3 {
-  margin-top: 20%;
-  margin-bottom: 2%;
+.section5 h3, .section5 p {
+  margin: 5rem;
+  text-align: center;
 }
 
-.section5 p {
-  width: 50%;
-  margin-top: 2%;
+.section5 img {
+  display: block;
+  margin: 0 auto;
 }
 
 /**Section 6**/
 .section6 {
-  margin: 5%;
+  margin: 5rem;
 }
 
-.section6 h3 {
-  margin-top: 20%;
+.section6 h3, .section6 p {
+  margin: 5rem;
+  text-align: center;
 }
 
-.section6 p {
-  width: 50%;
-  margin-top: 2%;
-}
 
 .section6 img {
-  margin-left: 10%;
-  margin-top: 5%;
+ display: block;
+  margin: 0 auto;
 }
 
 /**Section 7**/
 .section7 {
-  margin: 5%;
+  margin: 5rem;
 }
 
-.section7 h3 {
-  margin-top: 20%;
-  margin-bottom: 2%;
-}
-
-.section7 p {
-  width: 50%;
-  margin-top: 2%;
+.section7 h3, .section7 p {
+  margin: 5rem;
+  text-align: center;
 }
 
 .section7 img {
-  margin-left: 10%;
-  margin-top: 2%;
+ display: block;
+ margin: 0 auto;
 }
 
 /**Section 8**/
 .section8 {
-  margin: 5%;
+  margin: 5rem;
 }
 
-.section8 h3 {
-  margin-top: 20%;
-  margin-bottom: 2%;
+.section8 h3, .section8 p {
+  margin: 5rem;
+  text-align: center;
 }
 
-.section8 p {
-  width: 50%;
-  margin-top: 2%;
-}
-
-.section8 img{
-  width: 100%;
-}
-
-.break p {
-  margin-top: 10%;
+.desktops img {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
 }
 
 .smartphones img {
-  float: right;
-  margin-right: 25%;
-  margin-top: 10%;
-  width: 10%;
+  float: left;
+  margin-left: 12rem;
+}
+
+.smartphones2 img {
+  margin-left: 10rem;
 }
 
 /**Section 9**/
 .section9 {
-  margin: 5%;
+  margin: 5rem;
 }
 
-.section9 h3 {
-  margin-top: 20%;
-  margin-bottom: 2%;
-}
-
-.section9 p {
-  width: 50%;
-  margin-top: 2%;
+.section9 h3, .section9 p {
+  margin: 5rem;
+  text-align: center;
 }
 
 .move-top {

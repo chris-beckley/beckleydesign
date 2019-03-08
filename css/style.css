@@ -5,7 +5,7 @@
 body {
   display: grid;
   font-family: Montserrat;
-  font-size: 17px;
+  font-size: 1.6rem;
   line-height: 1.6;
   grid-template-areas:
   "hero"
@@ -14,23 +14,28 @@ body {
   "case-study-section3";
 }
 
+.navbar-logo {
+  float: left;
+}
 
-#buttons li {
+.navbar-list {
+  margin-left: 6rem;
+  margin-top: 1rem;
+}
+.topnav li {
   float: left;
   list-style: none;
   color: #FFFFFF;
   text-align: center;
-  background-color: #0C2340;
   margin-right: 64px;
  width: 150px;
  line-height: 50px;
  border-radius: 4px;
 }
 
-#buttons li a {
+.topnav li a {
   text-decoration: none;
   color: #FFFFFF;
-  display: block;
 }
 
 .navbar-list {
@@ -46,7 +51,7 @@ body {
 }
  h1 {
    color: #ffffff;
-  font-size: 56px;
+  font-size: 4rem;
   font-family: Fjalla One;
   text-align: center;
   margin-top: 16rem;
@@ -54,11 +59,11 @@ body {
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 2.25rem;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 2.1rem;
 }
 
 .busy-bus{
@@ -91,6 +96,7 @@ h3 {
 }
 
 .center {
+  margin: 2rem;
   text-align: center;
 }
 
@@ -129,9 +135,9 @@ h3 {
   text-align: center;
 }
 
-.center {
-  width: 50%;
-  margin-left: 10rem;
+.case-study-section1 img {
+  height: auto;
+  max-width: 100%;
 }
 
 

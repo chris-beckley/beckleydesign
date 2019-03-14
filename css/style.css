@@ -20,7 +20,7 @@ body {
 
 .navbar-list {
   grid-area: navbar-list;
-  margin-left: 6rem;
+  margin-left: 8rem;
   margin-top: 1rem;
 }
 
@@ -45,14 +45,13 @@ body {
 
   .navbar-list.responsive a {
     color: #ffffff;
-    float: none;
     display: block;
     text-align: left;
     text-decoration: none;
   }
 
 .navbar-list i {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 

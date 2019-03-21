@@ -159,6 +159,7 @@ h3 {
   height: auto;
   max-width: 100%;
 }
+
 /**Homepage Case Study Section 2**/
 .case-study-section2 {
   grid-area: case-study-section2;
@@ -261,17 +262,17 @@ i.fa {
     color: #ffffff;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 999px){
   h1{
     font-size: 3rem;
   }
 
-  .bloccloud-smartphone {
-   margin: 2rem
+  .bloccloud-smartphone, .bloccloud-desktop {
+   margin: 2rem;
  }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1000px) {
   .navbar-list a {
     float: left;
     list-style: none;
@@ -291,7 +292,9 @@ i.fa {
 
   .bloccloud-desktop {
     padding-top: 15rem;
-  }
+    position: relative;
+    left: 3rem;
+   }
 
   .bloccloud-smartphone {
     padding-top: 15rem;
@@ -299,9 +302,18 @@ i.fa {
 
   .case-study-section1 {
     padding: 4rem;
-   display: grid;
-   grid-template-columns: 1fr 1fr .5fr;
+    display: flex;
+    align-items: flex-start;
   }
+
+  .bloccloud-desktop img, .bloccloud-smartphone img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bloccloud-smartphone img {
+  margin-left: 2rem;
+}
 
   .case-study-section2 {
     padding: 4rem;
@@ -354,6 +366,7 @@ margin-left: 0;
 .flex {
   display: flex;
   flex-direction: row-reverse;
+  align-items: flex-start;
   margin: 5rem;
 }
 }

@@ -20,7 +20,6 @@ body {
 
 .navbar-list {
   grid-area: navbar-list;
-  margin-left: 8rem;
   margin-top: 1rem;
 }
 
@@ -46,6 +45,8 @@ body {
   .navbar-list.responsive a {
     color: #ffffff;
     display: block;
+    position: relative;
+    right: 64px;
     text-align: left;
     text-decoration: none;
   }
@@ -54,22 +55,39 @@ body {
   font-size: 2.5rem;
 }
 
+.navbar-flex {
+  display: flex;
+  justify-content: space-between;
+}
 
 /**Headers**/
 .hero {
   background-image: url(../images/hero-image.png);
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
   grid-area: hero;
   padding: 2rem;
 }
+
+.bloccloud-hero {
+  background-image: url(../images/bloccloud-hero-image.png);
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+}
+
  h1 {
    color: #ffffff;
   font-size: 4rem;
   font-family: Fjalla One;
   text-align: center;
-  line-height: 1.6;
-  margin-top: 16rem;
-  margin-bottom: 16rem;
+  line-height: 1.3;
+  margin: 10rem auto 10rem;
+  max-width: 700px;
+}
+
+.highlight {
+  color: #52afb3;
 }
 
 h2 {
@@ -115,13 +133,15 @@ h3 {
   grid-area: case-study-section1;
 }
 
-.center {
+.center, .center-last {
   margin: 2rem;
   text-align: center;
 }
 
 .bloccloud-h2 {
   text-align: center;
+  max-width: 400px;
+  margin: auto;
 }
 
 .button {
@@ -135,6 +155,12 @@ h3 {
   text-decoration: none;
 }
 
+.bloccloud-button a:hover {
+  color: #0C2340;
+  background-color: #FFFFFF;
+  transition-delay: 0.2s;
+}
+
 .button-2 {
   color: #FFFFFF;
   text-align: center;
@@ -146,18 +172,31 @@ h3 {
   text-decoration: none;
 }
 
-.bloccloud-button {
+.busybus-button a:hover {
+  color: #FFFFFF;
+  background-color: #0C2340;
+  transition-delay: 0.2s;
+}
+
+.bloccloud-button, .busybus-button {
   text-align: center;
   padding: 2rem;
 }
 
-.bloccloud-desktop, .bloccloud-smartphone, .bloccloud-logo {
+.bloccloud-desktop, .bloccloud-logo {
   text-align: center;
 }
 
-.bloccloud-logo img, .bloccloud-desktop img, .bloccloud-smartphone img {
+.bloccloud-logo img{
   height: auto;
-  max-width: 100%;
+  max-width: 100px;
+}
+
+.bloccloud-desktop img {
+    height: auto;
+    width: auto;
+    max-width: 500px;
+    max-height: 500px;
 }
 
 /**Homepage Case Study Section 2**/
@@ -181,56 +220,13 @@ h3 {
 
 .case-study-section2 img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5%;
+  margin: 5% auto;
+  max-height: 400px;
+  max-width: 400px;
 }
 
 /**Homepage Case Study Section 3**/
-.case-study-section3 {
-  grid-area: case-study-section3;
-}
 
-.button2 {
-  color: #FFFFFF;
-  text-align: center;
-  background-color: #0C2340;
-  width: 300px;
-  line-height: 60px;
-  border-radius: 4px;
-  padding: 20px;
-  text-decoration: none;
-}
-
-.draw-with-me {
-  text-align: center;
-  margin-top: 5rem;
-
-}
-
-.draw-with-me2 {
-  text-align: center;
-}
-
-.case-study-section3 p {
-  text-align: center;
-  margin-top: 1%;
-}
-
-.horizontal-image, .vertical-image {
-  text-align: center;
-  padding: 4rem;
-}
-
-.horizontal-image img, .vertical-image img {
-   max-width: 100%;
-  height: auto;
-}
-
-.upcoming {
-  margin-top: 10%;
-  text-align: center;
-}
 
 /**Footer**/
 footer {
@@ -262,6 +258,11 @@ i.fa {
     color: #ffffff;
 }
 
+i.fa:hover {
+  color: #52afb3;
+  transition-delay: 0.2s;
+}
+
 @media screen and (max-width: 999px){
   h1{
     font-size: 3rem;
@@ -286,9 +287,19 @@ i.fa {
    display: block;
   }
 
+  .navbar-list a:hover {
+color: #52afb3;
+transition-delay: 0.2s;
+}
+
+  .navbar-list a.icon {
+    display: none;
+  }
+
   .navbar-list i {
     display: none;
   }
+
 
   .bloccloud-desktop {
     padding-top: 15rem;
@@ -301,9 +312,9 @@ i.fa {
   }
 
   .case-study-section1 {
-    padding: 4rem;
     display: flex;
     align-items: flex-start;
+    justify-content: space-around;
   }
 
   .bloccloud-desktop img, .bloccloud-smartphone img {
@@ -316,9 +327,10 @@ i.fa {
 }
 
   .case-study-section2 {
-    padding: 4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 4rem;
   }
 
 .case-study-section2 img {
@@ -330,20 +342,6 @@ width: 100%;
 margin-left: 0;
 }
 
-
-.horizontal-image {
-  padding-top: 8rem;
-}
-
-.vertical-image {
-   float: left;
-   padding-left: 20rem;
- }
-
-  .upcoming {
-    margin: 10rem;
-  }
-
 .footer-icons{
   right: 30%;
 }
@@ -353,7 +351,7 @@ margin-left: 0;
   max-width: 100%;
   height: auto;
   position: relative;
-  left: 12rem
+  left: 14rem;
 }
 
 .smartphones2 img{
@@ -367,7 +365,14 @@ margin-left: 0;
   display: flex;
   flex-direction: row-reverse;
   align-items: flex-start;
-  margin: 5rem;
+  max-width: 1000px;
+  margin: auto;
+  padding-bottom: 5rem;
+}
+
+.about-me-section1 img, .about-me-section2 img {
+  position: relative;
+  left: 64px;
 }
 }
 /**Case Study Header**/
@@ -393,18 +398,26 @@ margin-left: 0;
   text-align: center;
 }
 
+.view-prototype a:hover{
+  color: #0C2340;
+  background-color: #FFFFFF;
+  transition-delay: 0.2s;
+
+}
+
 /**Case Study Body, Section 1**/
 .section1 {
   margin: 5rem;
 }
 
 .section1 h3 {
-  margin: 5rem;
+  margin: 5rem auto 3rem;
   text-align: center;
 }
 
 .section1 p {
-  text-align: center;
+  max-width: 700px;
+  margin: auto;
  }
 
 .section1-img {
@@ -423,17 +436,31 @@ margin: 5rem;
 }
 
 .section2 h3 {
-  margin-bottom: 2rem;
+  margin: 5rem auto 3rem;
   text-align: center;
 }
 
 .p-spacing, .break {
-  margin: 4rem;
+  margin: 5rem auto 5rem;
+  max-width: 600px;
   text-align: left;
 }
 
 .break {
-  padding-top: 1rem
+  padding-top: 5rem;
+}
+
+ul {
+  list-style-type: circle;
+  max-width: 700px;
+  margin: auto;
+}
+
+li {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  line-height: 1.2;
 }
 /**Section 3**/
 .section3 {
@@ -441,7 +468,7 @@ margin: 5rem;
 }
 
 .section3 h3 {
-  margin: 5rem;
+  margin: 5rem auto 3rem;
   text-align: center;
 }
 
@@ -452,13 +479,17 @@ margin: 5rem;
   height: auto;
 }
 
+b {
+  font-weight: 700;
+}
+
 /**Section 4**/
 .section4 {
   margin: 5rem;
 }
 
 .section4 h3 {
-  margin: 5rem;
+  margin: 5rem auto 3rem;
   text-align: center;
 }
 
@@ -471,7 +502,7 @@ margin: 5rem;
 
 /**Section 5**/
 .section5 {
-  margin: 5rem;
+  margin: 5rem auto 3rem;
 }
 
 .section5 h3 {
@@ -488,7 +519,7 @@ margin: 5rem;
 
 /**Section 6**/
 .section6 {
-  margin: 5rem;
+  margin: 5rem auto 3rem;
 }
 
 .section6 h3 {
@@ -500,7 +531,7 @@ margin: 5rem;
 .section6 img {
  display: block;
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 900px;
   height: auto;
 }
 
@@ -510,7 +541,7 @@ margin: 5rem;
 }
 
 .section7 h3 {
-  margin: 5rem;
+  margin: 5rem auto 3rem;
   text-align: center;
 }
 
@@ -521,13 +552,17 @@ margin: 5rem;
  height: auto;
 }
 
+.style-guide img {
+  margin: 5rem auto 5rem;
+}
+
 /**Section 8**/
 .section8 {
   margin: 5rem;
 }
 
 .section8 h3 {
-  margin: 5rem;
+  margin: 5rem auto 3rem;
   text-align: center;
 }
 
@@ -556,7 +591,7 @@ margin: 5rem;
 }
 
 .section9 h3 {
-  margin: 5rem;
+  margin: 5rem auto 3rem;
   text-align: center;
 }
 
@@ -565,20 +600,42 @@ margin: 5rem;
   margin-top: 10%;
 }
 
+.move-top a:hover{
+  color: #FFFFFF;
+  background-color: #0C2340;
+  transition-delay: 0.2s;
+}
+
 /**About Me**/
 .about {
   margin: 5rem;
   text-align: center;
 }
 
+b {
+  font-weight: 700;
+}
+
 .about-me-section1 img,.about-me-section2 img {
   display: block;
   height: auto;
-  max-width: 100%;
+  max-width: 400px;
   margin: 0 auto;
+  padding-bottom: 5rem;
 }
 
-.about-me-section2 {
- padding-top: 5rem;
- padding-bottom: 5rem;
+.about-me-section1, .about-me-section2 {
+padding-top: 5rem;
+padding-bottom: 5rem;
+}
+
+.quote {
+  font-size: 2rem;
+  line-height: 1.1;
+  margin: auto;
+  max-width: 600px;
+  font-style: italic;
+  border-left: solid 4px white;
+  padding-left: 20px;
+  margin-bottom: 5rem;
 }

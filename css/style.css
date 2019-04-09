@@ -7,6 +7,8 @@ body {
   font-family: Montserrat;
   font-size: 1rem;
   line-height: 1.6rem;
+  background-color: #ffffff;
+  margin: 11px;
   grid-template-areas:
   "hero"
   "case-study-section1"
@@ -21,6 +23,10 @@ body {
 .navbar-list {
   grid-area: navbar-list;
   margin-top: 1rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 30px;
+  align-items: center;
 }
 
 .navbar-list a {
@@ -62,7 +68,7 @@ body {
 
 /**Headers**/
 .hero {
-  background-image: url(../images/hero-image.png);
+  background-image: url(../images/hero-image.jpg);
   background-size: cover;
   background-position: center;
   grid-area: hero;
@@ -70,7 +76,7 @@ body {
 }
 
 .bloccloud-hero {
-  background-image: url(../images/bloccloud-hero-image.png);
+  background-image: url(../images/bloccloud-hero-image.jpg);
   background-size: cover;
   background-position: center;
   padding: 2rem;
@@ -79,20 +85,25 @@ body {
  h1 {
    color: #ffffff;
   font-size: 4rem;
-  font-family: Fjalla One;
+  font-family: Oswald;
   text-align: center;
   line-height: 1.3;
   margin: 10rem auto 10rem;
-  max-width: 700px;
+  max-width: 500px;
 }
 
 .highlight {
   color: #52afb3;
+  font-weight: 200;
+}
+
+.weight {
+  font-weight: 700;
 }
 
 h2 {
   font-size: 2.25rem;
-  line-height: 1.6;
+  line-height: 1.3;
 }
 
 h3 {
@@ -112,12 +123,12 @@ h3 {
   color: #ffffff;
 }
 
-.case-study-section2 {
+.case-study-section2, .about-me-section2 {
   background-color: #ffffff;
   color: #000000;
 }
 
- footer, .about-me-section2 {
+ footer {
   background-color: #0C2340;
   color: #ffffff;
 }
@@ -133,15 +144,18 @@ h3 {
   grid-area: case-study-section1;
 }
 
-.center, .center-last {
-  margin: 2rem;
+.center {
+  padding: 2rem;
+}
+ .center-last {
+  padding: 2rem;
   text-align: center;
 }
 
 .bloccloud-h2 {
-  text-align: center;
   max-width: 400px;
   margin: auto;
+  padding-left: 2rem;
 }
 
 .button {
@@ -179,11 +193,10 @@ h3 {
 }
 
 .bloccloud-button, .busybus-button {
-  text-align: center;
   padding: 2rem;
 }
 
-.bloccloud-desktop, .bloccloud-logo {
+.bloccloud-logo {
   text-align: center;
 }
 
@@ -204,18 +217,23 @@ h3 {
   grid-area: case-study-section2;
 }
 
+.busy-bus-logo img {
+  height: auto;
+  width: auto;
+  padding-top: 3rem;
+
+}
+
 .busy-bus {
-  text-align: center;
   margin-top: 20%;
 }
 
 .busy-bus2 {
-  text-align: center;
+  padding-left: 2rem;
 }
 
 .case-study-section2 p {
   margin-top: 1%;
-  text-align: center;
 }
 
 .case-study-section2 img {
@@ -238,9 +256,21 @@ footer h2 {
 
 footer p {
   text-align: center;
-  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
+footer::after {
+  content: '';
+  width: 0;
+height: 0;
+border-style: solid;
+border-width: 50px 50px 0 50px;
+border-color: #ffffff transparent transparent transparent;
+position: relative;
+top: -400px;
+left: calc(50% - 50px);
+
+}
 
 .footer-icons {
   display: flex;
@@ -268,6 +298,32 @@ i.fa:hover {
     font-size: 3rem;
   }
 
+  .bloccloud-h2 {
+    text-align: center;
+  }
+
+  .center {
+    text-align: center;
+}
+  .bloccloud-button, .busybus-button {
+    text-align: center;
+  }
+
+  .bloccloud-desktop, .bloccloud-logo {
+    text-align: center;
+  }
+
+  .busy-bus {
+    text-align: center;
+  }
+
+  .busy-bus2 {
+    text-align: center;
+  }
+
+  .case-study-section2 p {
+    text-align: center;
+  }
   .bloccloud-smartphone, .bloccloud-desktop {
    margin: 2rem;
  }
@@ -279,19 +335,19 @@ i.fa:hover {
     list-style: none;
     color: #FFFFFF;
     text-align: center;
-    margin-right: 64px;
-   width: 150px;
-   line-height: 50px;
-   border-radius: 4px;
    text-decoration: none;
    display: block;
+   padding: 20px;
   }
 
-  .navbar-list a:hover {
+.navbar-list a:hover {
 color: #52afb3;
 transition-delay: 0.2s;
 }
 
+.navbar-list a.current {
+  color: #52afb3;
+}
   .navbar-list a.icon {
     display: none;
   }
@@ -299,7 +355,6 @@ transition-delay: 0.2s;
   .navbar-list i {
     display: none;
   }
-
 
   .bloccloud-desktop {
     padding-top: 15rem;
@@ -333,10 +388,6 @@ transition-delay: 0.2s;
     margin: 4rem;
   }
 
-.case-study-section2 img {
-  padding-left: 5rem;
-}
-
 .center {
 width: 100%;
 margin-left: 0;
@@ -346,19 +397,15 @@ margin-left: 0;
   right: 30%;
 }
 
-.smartphones img {
-  float:left;
-  max-width: 100%;
-  height: auto;
-  position: relative;
-  left: 14rem;
+.smartphones-spacing {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
 }
 
-.smartphones2 img{
+.smartphones img, .smartphones2 img {
   height: auto;
-  max-width: 100%;
-  position: relative;
-  left: 8rem;
+  max-width: 300px;
 }
 
 .flex {
@@ -417,7 +464,7 @@ margin-left: 0;
 
 .section1 p {
   max-width: 700px;
-  margin: auto;
+  margin: 2rem auto 2rem;
  }
 
 .section1-img {
@@ -429,7 +476,6 @@ margin-left: 0;
   height: auto;
   max-width: 100%;
 }
-
 /**Section 2**/
 .section2 {
 margin: 5rem;
@@ -441,7 +487,7 @@ margin: 5rem;
 }
 
 .p-spacing, .break {
-  margin: 5rem auto 5rem;
+  margin: 2rem auto 2rem;
   max-width: 600px;
   text-align: left;
 }
@@ -517,6 +563,16 @@ b {
   height: auto;
 }
 
+.user-stories {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.user-stories a:hover {
+  color: #FFFFFF;
+  background-color: #0C2340;
+  transition-delay: 0.2s;
+}
 /**Section 6**/
 .section6 {
   margin: 5rem auto 3rem;
@@ -576,7 +632,7 @@ b {
 .smartphones img, .smartphones2 img {
   display: block;
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 400px;
   height: auto;
 }
 
@@ -635,7 +691,7 @@ padding-bottom: 5rem;
   margin: auto;
   max-width: 600px;
   font-style: italic;
-  border-left: solid 4px white;
+  border-left: solid 4px black;
   padding-left: 20px;
   margin-bottom: 5rem;
 }

@@ -144,18 +144,17 @@ h3 {
   grid-area: case-study-section1;
 }
 
-.center {
-  padding: 2rem;
+.case-study-section1 h2, .case-study-section1 p {
+  padding: 0.8rem 0;
 }
- .center-last {
-  padding: 2rem;
-  text-align: center;
+
+.bloccloud-logo {
+  margin-top: 5rem;
 }
 
 .bloccloud-h2 {
   max-width: 400px;
   margin: auto;
-  padding-left: 2rem;
 }
 
 .button {
@@ -172,7 +171,7 @@ h3 {
 .bloccloud-button a:hover {
   color: #0C2340;
   background-color: #FFFFFF;
-  transition-delay: 0.2s;
+  transition: 0.2s;
 }
 
 .button-2 {
@@ -189,20 +188,12 @@ h3 {
 .busybus-button a:hover {
   color: #FFFFFF;
   background-color: #0C2340;
-  transition-delay: 0.2s;
-}
-
-.bloccloud-button, .busybus-button {
-  padding: 2rem;
-}
-
-.bloccloud-logo {
-  text-align: center;
+  transition: 0.2s;
 }
 
 .bloccloud-logo img{
   height: auto;
-  max-width: 100px;
+  width: 100px;
 }
 
 .bloccloud-desktop img {
@@ -215,38 +206,35 @@ h3 {
 /**Homepage Case Study Section 2**/
 .case-study-section2 {
   grid-area: case-study-section2;
+  padding: 2rem;
+  margin: 5rem 0;
+}
+
+.case-study-section2 h2, .case-study-section2 p {
+  padding: 0.8rem 0;
 }
 
 .busy-bus-logo img {
   height: auto;
   width: auto;
   padding-top: 3rem;
-
-}
-
-.busy-bus {
-  margin-top: 20%;
-}
-
-.busy-bus2 {
-  padding-left: 2rem;
-}
-
-.case-study-section2 p {
-  margin-top: 1%;
 }
 
 .case-study-section2 img {
   display: block;
-  margin: 5% auto;
   max-height: 400px;
   max-width: 400px;
 }
+
 
 /**Homepage Case Study Section 3**/
 
 
 /**Footer**/
+.center-last {
+ text-align: center;
+}
+
 footer {
   padding: 10rem;
 }
@@ -321,10 +309,17 @@ i.fa:hover {
     text-align: center;
   }
 
+  .case-study-section2 img {
+    margin: 0 auto;
+  }
+
+  .busy-bus-mobile {
+    padding-top: 2rem;
+  }
   .case-study-section2 p {
     text-align: center;
   }
-  .bloccloud-smartphone, .bloccloud-desktop {
+   .bloccloud-desktop {
    margin: 2rem;
  }
 }
@@ -342,7 +337,7 @@ i.fa:hover {
 
 .navbar-list a:hover {
 color: #52afb3;
-transition-delay: 0.2s;
+transition: 0.2s;
 }
 
 .navbar-list a.current {
@@ -357,13 +352,7 @@ transition-delay: 0.2s;
   }
 
   .bloccloud-desktop {
-    padding-top: 15rem;
-    position: relative;
-    left: 3rem;
-   }
-
-  .bloccloud-smartphone {
-    padding-top: 15rem;
+    padding-top: 5rem;
   }
 
   .case-study-section1 {
@@ -372,29 +361,21 @@ transition-delay: 0.2s;
     justify-content: space-around;
   }
 
-  .bloccloud-desktop img, .bloccloud-smartphone img {
+  .bloccloud-desktop img {
     max-width: 100%;
     height: auto;
-}
-
-.bloccloud-smartphone img {
-  margin-left: 2rem;
 }
 
   .case-study-section2 {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    margin: 4rem;
+    flex-direction: row-reverse;
+    justify-content: space-around;
   }
 
 .center {
 width: 100%;
 margin-left: 0;
-}
-
-.footer-icons{
-  right: 30%;
 }
 
 .smartphones-spacing {
@@ -424,7 +405,7 @@ margin-left: 0;
 }
 /**Case Study Header**/
 
-.bloccloud-logo {
+.bloccloud-logo2 {
  text-align: center;
  margin-top: 15rem;
 }
@@ -448,7 +429,7 @@ margin-left: 0;
 .view-prototype a:hover{
   color: #0C2340;
   background-color: #FFFFFF;
-  transition-delay: 0.2s;
+  transition: 0.2s;
 
 }
 
@@ -457,9 +438,10 @@ margin-left: 0;
   margin: 5rem;
 }
 
-.section1 h3 {
-  margin: 5rem auto 3rem;
-  text-align: center;
+h3 {
+margin: 5rem auto 3rem;
+text-align: center;
+color: #0C2340;
 }
 
 .section1 p {
@@ -479,11 +461,6 @@ margin-left: 0;
 /**Section 2**/
 .section2 {
 margin: 5rem;
-}
-
-.section2 h3 {
-  margin: 5rem auto 3rem;
-  text-align: center;
 }
 
 .p-spacing, .break {
@@ -507,15 +484,11 @@ li {
   margin-bottom: 10px;
   font-size: 1.5rem;
   line-height: 1.2;
+  color: #52afb3;
 }
 /**Section 3**/
 .section3 {
   margin: 5rem;
-}
-
-.section3 h3 {
-  margin: 5rem auto 3rem;
-  text-align: center;
 }
 
 .section3 img {
@@ -527,16 +500,12 @@ li {
 
 b {
   font-weight: 700;
+  color: #52afb3;
 }
 
 /**Section 4**/
 .section4 {
   margin: 5rem;
-}
-
-.section4 h3 {
-  margin: 5rem auto 3rem;
-  text-align: center;
 }
 
 .section4 img {
@@ -551,16 +520,15 @@ b {
   margin: 5rem auto 3rem;
 }
 
-.section5 h3 {
-  margin: 5rem;
-  text-align: center;
-}
-
 .section5 img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
   height: auto;
+}
+
+img.mw-500 {
+  max-width: 600px;
 }
 
 .user-stories {
@@ -578,11 +546,6 @@ b {
   margin: 5rem auto 3rem;
 }
 
-.section6 h3 {
-  margin: 5rem;
-  text-align: center;
-}
-
 
 .section6 img {
  display: block;
@@ -594,11 +557,6 @@ b {
 /**Section 7**/
 .section7 {
   margin: 5rem;
-}
-
-.section7 h3 {
-  margin: 5rem auto 3rem;
-  text-align: center;
 }
 
 .section7 img {
@@ -615,11 +573,6 @@ b {
 /**Section 8**/
 .section8 {
   margin: 5rem;
-}
-
-.section8 h3 {
-  margin: 5rem auto 3rem;
-  text-align: center;
 }
 
 .desktops img {
@@ -644,11 +597,6 @@ b {
 /**Section 9**/
 .section9 {
   margin: 5rem;
-}
-
-.section9 h3 {
-  margin: 5rem auto 3rem;
-  text-align: center;
 }
 
 .move-top {
